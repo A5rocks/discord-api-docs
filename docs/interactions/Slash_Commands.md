@@ -972,7 +972,7 @@ An interaction is the base "thing" that is sent when a user invokes a command, a
 | -------------- | --------------------------------------------------------------------------------------------------------------------------------- | -------------------------------------------------------------- |
 | id             | snowflake                                                                                                                         | id of the interaction                                          |
 | application_id | snowflake                                                                                                                         | id of the application this interaction is for                  |
-| type           | [interaction type](#DOCS_INTERACTIONS_SLASH_COMMANDS/interaction-object-interaction-type)                                         | the type of interaction                                        |
+| type           | [interaction type](#DOCS_INTERACTIONS_SLASH_COMMANDS/interaction-object-interaction-request-type)                                         | the type of interaction                                        |
 | data?\*        | [application command interaction data](#DOCS_INTERACTIONS_SLASH_COMMANDS/interaction-object-application-command-interaction-data) | the command data payload                                       |
 | guild_id?      | snowflake                                                                                                                         | the guild it was sent from                                     |
 | channel_id?    | snowflake                                                                                                                         | the channel it was sent from                                   |
@@ -1071,7 +1071,7 @@ Not all message fields are currently supported.
 | content?          | string                                                              | message content                                                                                                                        |
 | embeds?           | array of [embeds](#DOCS_RESOURCES_CHANNEL/embed-object)             | supports up to 10 embeds                                                                                                               |
 | allowed_mentions? | [allowed mentions](#DOCS_RESOURCES_CHANNEL/allowed-mentions-object) | [allowed mentions](#DOCS_RESOURCES_CHANNEL/allowed-mentions-object) object                                                             |
-| flags?            | integer                                                             | [interaction application command callback data flags](interaction-response-object-interaction-application-command-callback-data-flags) |
+| flags?            | integer                                                             | [interaction application command callback data flags](#DOCS_INTERACTIONS_SLASH_COMMANDS/interaction-response-object-interaction-application-command-callback-data-flags) |
 | components?       | array of [components](#DOCS_INTERACTIONS_MESSAGE_COMPONENTS/)       | message components                                                                                                                     |
 
 ###### Interaction Application Command Callback Data Flags
@@ -1089,6 +1089,6 @@ This is sent on the [message object](#DOCS_RESOURCES_CHANNEL/message-object) whe
 | Name | Type                                                                                      | Description                                                                                                                       |
 | ---- | ----------------------------------------------------------------------------------------- | --------------------------------------------------------------------------------------------------------------------------------- |
 | id   | snowflake                                                                                 | id of the interaction                                                                                                             |
-| type | [interaction type](#DOCS_INTERACTIONS_SLASH_COMMANDS/interaction-object-interaction-type) | the type of interaction                                                                                                           |
+| type | [interaction type](#DOCS_INTERACTIONS_SLASH_COMMANDS/interaction-object-interaction-request-type) | the type of interaction                                                                                                           |
 | name | string                                                                                    | the name of the [application command](#DOCS_INTERACTIONS_SLASH_COMMANDS/application-command-object-application-command-structure) |
 | user | [user object](#DOCS_RESOURCES_USER/user-object)                                           | the user who invoked the interaction                                                                                              |
